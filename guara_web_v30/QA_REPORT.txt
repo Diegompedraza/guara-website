@@ -1,0 +1,1 @@
+V30 QA: mobile header isolated from document flow; horizontal body scrolling blocked; language switch and hamburger fixed to viewport header; CSS/JS filenames versioned to bypass stale browser/Cloudflare cache.
