@@ -257,3 +257,13 @@ if (stagedValidation) {
   validationObserver.observe(stagedValidation);
 }
 
+
+// ===== V29: prevent persistent horizontal document offset on mobile =====
+(function mobileViewportGuard(){
+  const resetHorizontalOffset = () => {
+    document.documentElement.scrollLeft = 0;
+    if (document.body) document.body.scrollLeft = 0;
+  };
+  window.addEventListener('load', resetHorizontalOffset, { once: true });
+  window.addEventListener('orientationchange', () => setTimeout(resetHorizontalOffset, 80));
+})();
