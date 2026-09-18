@@ -1,1 +1,1 @@
-GUARA Platform v31 - fixes bilingual mobile header parity and reliable EN/ES switching on both / and /es/.
+GUARA Platform V32 — official visual identity applied. Uses the user-approved GUARA G mark in header/footer, favicon, schema logo and social preview. Based on V31 bilingual/mobile-stable baseline.

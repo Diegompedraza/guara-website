@@ -1,8 +1,8 @@
-GUARA Platform V31 QA
-- English home uses /styles.v31.css + /script.v31.js
-- Spanish /es/ uses the same /styles.v31.css + /script.v31.js
-- Mobile header/menu parity between EN and ES
-- ES button routes to /es/
-- EN button routes to /
-- Canonical language follows URL; stale localStorage cannot trap language
-- Cache-busted CSS/JS filenames force fresh mobile assets
+V32 IDENTITY QA
+- Based on V31 mobile/bilingual stable build
+- Official GUARA G extracted from user-supplied master logo without generative alteration
+- Header/footer glyph replaced across all HTML pages
+- Favicons 32/64/192/512 generated from exact G
+- Organization schema logo updated
+- OpenGraph/Twitter social image updated
+- EN/ES URLs and mobile navigation preserved

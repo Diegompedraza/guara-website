@@ -3575,3 +3575,28 @@ svg {
   .nav-wrap .nav-actions .lang-switch { min-width: 62px !important; }
   .nav-wrap .nav-actions .menu-btn { width: 34px !important; height: 34px !important; min-width: 34px !important; flex-basis: 34px !important; }
 }
+
+
+/* ===== V32: official GUARA identity ===== */
+.brand-glyph-official {
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+}
+.brand-glyph-official::after { display:none !important; content:none !important; }
+.brand-glyph-img {
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  filter: drop-shadow(0 0 8px rgba(26,219,217,.28));
+}
+@media (max-width: 720px) {
+  .nav-wrap .brand-glyph-official { overflow: visible !important; }
+  .nav-wrap .brand-glyph-img { width:100%; height:100%; }
+}
