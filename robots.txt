@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://guaraplatform.com/sitemap.xml
+
+# Canonical production host: https://guaraplatform.com/

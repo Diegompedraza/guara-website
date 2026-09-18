@@ -1,0 +1,4 @@
+Contact: mailto:guaraplatform@gmail.com
+Canonical: https://guaraplatform.com/.well-known/security.txt
+Preferred-Languages: en, es
+Expires: 2027-09-18T23:59:59Z

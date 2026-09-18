@@ -14,3 +14,16 @@
 
 /script.js
   Cache-Control: public, max-age=86400
+
+
+# Keep Cloudflare preview/version hosts out of search indexes
+https://:version.:subdomain.workers.dev/*
+  X-Robots-Tag: noindex, nofollow
+
+# Cache XML/text discovery files briefly so updates propagate quickly
+/robots.txt
+  Cache-Control: public, max-age=3600
+/sitemap.xml
+  Cache-Control: public, max-age=3600
+/llms.txt
+  Cache-Control: public, max-age=3600

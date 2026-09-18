@@ -57,9 +57,18 @@
   }
 
   window.GUARA_I18N = { applyLanguage, getLanguage: () => document.documentElement.lang || 'en' };
-  document.querySelectorAll('.lang-btn').forEach(btn => btn.addEventListener('click', () => applyLanguage(btn.dataset.lang)));
-  let initial = 'en';
-  try { initial = localStorage.getItem('guara-language-v25') || 'en'; } catch (_) {}
+  document.querySelectorAll('.lang-btn').forEach(btn => btn.addEventListener('click', () => {
+    const target = btn.dataset.lang;
+    const isSpanishUrl = location.pathname === '/es/' || location.pathname === '/es';
+    if (target === 'es' && !isSpanishUrl) { location.href = '/es/'; return; }
+    if (target === 'en' && isSpanishUrl) { location.href = '/'; return; }
+    applyLanguage(target);
+  }));
+  const isSpanishUrl = location.pathname === '/es/' || location.pathname === '/es';
+  let initial = isSpanishUrl ? 'es' : 'en';
+  if (!isSpanishUrl) {
+    try { initial = localStorage.getItem('guara-language-v25') || 'en'; } catch (_) {}
+  }
   if (!['es','en'].includes(initial)) initial='en';
   applyLanguage(initial);
 })();
@@ -68,12 +77,38 @@
 const menuBtn = document.getElementById("menuBtn");
 const navLinks = document.getElementById("navLinks");
 
-menuBtn.addEventListener("click", () => {
-  navLinks.classList.toggle("open");
-});
+function setMenuOpen(open) {
+  if (!menuBtn || !navLinks) return;
+  navLinks.classList.toggle("open", open);
+  menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+  const lang = document.documentElement.lang === "es" ? "es" : "en";
+  menuBtn.setAttribute("aria-label", open
+    ? (lang === "es" ? "Cerrar menú" : "Close menu")
+    : (lang === "es" ? "Abrir menú" : "Open menu"));
+}
+
+if (menuBtn && navLinks) {
+  menuBtn.addEventListener("click", (event) => {
+    event.stopPropagation();
+    setMenuOpen(!navLinks.classList.contains("open"));
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!navLinks.classList.contains("open")) return;
+    if (!navLinks.contains(event.target) && !menuBtn.contains(event.target)) setMenuOpen(false);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setMenuOpen(false);
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 720) setMenuOpen(false);
+  });
+}
 
 document.querySelectorAll(".nav-links a").forEach(link => {
-  link.addEventListener("click", () => navLinks.classList.remove("open"));
+  link.addEventListener("click", () => setMenuOpen(false));
 });
 
 const observer = new IntersectionObserver(entries => {

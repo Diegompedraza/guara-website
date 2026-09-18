@@ -9,3 +9,5 @@ Security: _headers with nosniff, frame denial, referrer policy, permissions poli
 Performance: media externalized; below-fold images lazy loaded; scripts deferred
 
 NOTE: Search ranking cannot be guaranteed. Google Search Console submission and ongoing authoritative content/backlinks remain necessary.
+
+V28 MOBILE NAV: compact header selector + anchored dropdown; aria-expanded, outside-click, Escape and resize close behavior added.

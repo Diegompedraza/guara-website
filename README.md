@@ -1,15 +1,8 @@
-# GUARA Platform Website — v26 Production
+# GUARA Platform Website v27
 
-Production build for https://guaraplatform.com/
+Production website for https://guaraplatform.com/.
 
-Improvements over v25:
-- Extracted heavy embedded media into cacheable assets
-- Split CSS and JavaScript
-- SEO metadata, canonical URL, Open Graph/Twitter metadata
-- robots.txt and sitemap.xml
-- Organization structured data
-- Cloudflare security headers
-- 404 fallback
-- Lazy-loaded below-the-fold illustrations
+V27 expands crawlability and discoverability with dedicated topic pages, a crawlable Spanish URL, reciprocal hreflang, richer structured data, video sitemap metadata, internal linking, llms.txt, web manifest, security.txt, and preview-host noindex headers.
 
-Default language: English. Spanish remains available from the language switcher.
+
+V28: mobile header UX improved. Language switch remains visible in the mobile header; hamburger opens an in-page anchored dropdown with accessible close behavior.

@@ -1,0 +1,17 @@
+# GUARA Platform
+
+> GUARA Platform is an Edge AI and computer vision platform for continuous human-state observability, temporal reasoning and safety-critical environments. Mobility is the first operational vertical.
+
+## Canonical site
+- https://guaraplatform.com/
+
+## Key pages
+- https://guaraplatform.com/about/
+- https://guaraplatform.com/mobility/
+- https://guaraplatform.com/technology/
+- https://guaraplatform.com/validation/
+- https://guaraplatform.com/integration/
+- https://guaraplatform.com/es/
+
+## Contact
+- guaraplatform@gmail.com

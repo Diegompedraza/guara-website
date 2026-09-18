@@ -1,0 +1,15 @@
+{
+  "name": "GUARA Platform",
+  "short_name": "GUARA",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07110f",
+  "theme_color": "#07110f",
+  "icons": [
+    {
+      "src": "/assets/guara-platform-logo.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ]
+}
