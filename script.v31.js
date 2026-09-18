@@ -59,17 +59,24 @@
   window.GUARA_I18N = { applyLanguage, getLanguage: () => document.documentElement.lang || 'en' };
   document.querySelectorAll('.lang-btn').forEach(btn => btn.addEventListener('click', () => {
     const target = btn.dataset.lang;
-    const isSpanishUrl = location.pathname === '/es/' || location.pathname === '/es';
-    if (target === 'es' && !isSpanishUrl) { location.href = '/es/'; return; }
-    if (target === 'en' && isSpanishUrl) { location.href = '/'; return; }
-    applyLanguage(target);
+    if (target === 'es') {
+      if (location.pathname !== '/es/' && location.pathname !== '/es') {
+        window.location.assign('/es/');
+        return;
+      }
+      applyLanguage('es');
+      return;
+    }
+    if (target === 'en') {
+      if (location.pathname === '/es/' || location.pathname === '/es') {
+        window.location.assign('/');
+        return;
+      }
+      applyLanguage('en');
+    }
   }));
   const isSpanishUrl = location.pathname === '/es/' || location.pathname === '/es';
-  let initial = isSpanishUrl ? 'es' : 'en';
-  if (!isSpanishUrl) {
-    try { initial = localStorage.getItem('guara-language-v25') || 'en'; } catch (_) {}
-  }
-  if (!['es','en'].includes(initial)) initial='en';
+  const initial = isSpanishUrl ? 'es' : 'en';
   applyLanguage(initial);
 })();
 

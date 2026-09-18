@@ -1,0 +1,8 @@
+GUARA Platform V31 QA
+- English home uses /styles.v31.css + /script.v31.js
+- Spanish /es/ uses the same /styles.v31.css + /script.v31.js
+- Mobile header/menu parity between EN and ES
+- ES button routes to /es/
+- EN button routes to /
+- Canonical language follows URL; stale localStorage cannot trap language
+- Cache-busted CSS/JS filenames force fresh mobile assets
