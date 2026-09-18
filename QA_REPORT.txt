@@ -1,0 +1,11 @@
+GUARA Platform v26 production QA
+Generated: 2026-09-18
+
+Index size: 37.1 KB
+Total deploy size: 12.26 MB
+Media extracted: 9 files
+SEO: title, description, canonical, robots, sitemap, OG, Twitter, JSON-LD
+Security: _headers with nosniff, frame denial, referrer policy, permissions policy, HSTS, CSP
+Performance: media externalized; below-fold images lazy loaded; scripts deferred
+
+NOTE: Search ranking cannot be guaranteed. Google Search Console submission and ongoing authoritative content/backlinks remain necessary.
