@@ -1,0 +1,50 @@
+# Files that must never be uploaded/served as public static assets.
+# Keep .well-known/ (security.txt), robots.txt, llms.txt, sitemap.xml and _headers served.
+
+# Version control
+.git
+.git/**
+.gitignore
+.gitattributes
+.github
+.github/**
+
+# Deployment / tooling config
+wrangler.jsonc
+wrangler.json
+wrangler.toml
+.wrangler
+.wrangler/**
+.dev.vars
+.dev.vars*
+.env
+.env.*
+.assetsignore
+
+# Project docs and internal reports
+README.md
+QA_REPORT.txt
+
+# Dependencies
+node_modules
+node_modules/**
+package.json
+package-lock.json
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+
+# Editor / AI-assistant / OS metadata
+.vscode
+.vscode/**
+.idea
+.idea/**
+.claude
+.claude/**
+.DS_Store
+Thumbs.db
+desktop.ini
