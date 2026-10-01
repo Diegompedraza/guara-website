@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy & Operator Trust | How GUARA Handles Operator Data</title>
+<meta name="description" content="How GUARA Platform handles operator data: local processing, no facial recognition required to identify the operator, no continuous cloud video and optional, minimized operational telemetry.">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="https://guaraplatform.com/privacy/">
+<link rel="alternate" hreflang="en" href="https://guaraplatform.com/privacy/">
+<link rel="alternate" hreflang="es" href="https://guaraplatform.com/es/privacidad/">
+<link rel="alternate" hreflang="x-default" href="https://guaraplatform.com/privacy/">
+<link rel="stylesheet" href="/seo-pages.css">
+<link rel="icon" href="/assets/guara-platform-logo-official.png" type="image/png">
+<meta name="theme-color" content="#091429">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GUARA Platform">
+<meta property="og:title" content="Privacy & Operator Trust | How GUARA Handles Operator Data">
+<meta property="og:description" content="Local processing, no facial recognition required to identify the operator, no continuous cloud video and optional, minimized operational telemetry.">
+<meta property="og:url" content="https://guaraplatform.com/privacy/">
+<meta property="og:image" content="https://guaraplatform.com/assets/video_poster.jpg">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_AR">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://guaraplatform.com/privacy/#webpage","url":"https://guaraplatform.com/privacy/","name":"Privacy & Operator Trust | How GUARA Handles Operator Data","description":"How GUARA Platform handles operator data: local processing, no facial recognition required to identify the operator, no continuous cloud video and optional, minimized operational telemetry.","isPartOf":{"@id":"https://guaraplatform.com/#website"},"about":{"@id":"https://guaraplatform.com/#organization"},"inLanguage":"en","dateModified":"2026-10-01"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"GUARA Platform","item":"https://guaraplatform.com/"},{"@type":"ListItem","position":2,"name":"Privacy","item":"https://guaraplatform.com/privacy/"}]}]}</script>
+</head>
+<body>
+<header class="top">
+<div class="wrap">
+<a class="brand" href="/">GUARA PLATFORM</a>
+<a class="lang" href="/es/privacidad/" hreflang="es" lang="es">ES</a>
+</div>
+</header>
+<main>
+<section class="hero">
+<div class="wrap">
+<div class="crumb"><a href="/">Home</a> / Privacy</div>
+<div class="k">PRIVACY &amp; OPERATOR TRUST</div>
+<h1>How GUARA handles operator data</h1>
+<p class="lead">GUARA is designed to estimate operational human state while minimizing unnecessary exposure of personal information. Its core detection can run locally on the device and does not require identifying the operator.</p>
+<ul class="chips" aria-label="Key principles">
+<li>Local processing</li>
+<li>No identity recognition required</li>
+<li>No continuous cloud video</li>
+<li>Minimized telemetry</li>
+</ul>
+</div>
+</section>
+<div class="content">
+<div class="wrap">
+<section>
+<h2><span class="num">01</span>What GUARA analyzes</h2>
+<p>GUARA looks at visual signals associated with attention and alertness while a person operates a vehicle or a safety-critical task. It interprets how these signals behave and change over time:</p>
+<ul class="ruled">
+<li>Eye openness and blinking</li>
+<li>Gaze direction</li>
+<li>Head orientation</li>
+<li>Attention-related visual patterns</li>
+<li>Temporal changes associated with fatigue, drowsiness or distraction</li>
+</ul>
+<p>The goal is to estimate an operational state, such as whether attention appears to be degrading, not to determine who the person is.</p>
+</section>
+<section>
+<h2><span class="num">02</span>What GUARA does not need</h2>
+<div class="cards">
+<div class="card"><strong>Facial recognition to determine identity</strong>The system evaluates operational-state signals. It does not need to recognize or match a face to know who the operator is.</div>
+<div class="card"><strong>Permanent Internet connectivity</strong>Core detection can run on the device itself, so it keeps working in areas with limited or no connectivity.</div>
+<div class="card"><strong>Continuous cloud video transmission</strong>The architecture does not require streaming video from the cabin or workstation to a remote server.</div>
+</div>
+</section>
+<section>
+<h2><span class="num">03</span>What can remain local</h2>
+<p>Camera images can be processed on the device to extract the signals described above. Depending on the deployment configuration, visual input can be analyzed locally and then discarded, without building a continuous video record.</p>
+<p>This keeps the most sensitive raw material, the image of the person, as close as possible to where it is captured and minimizes how much of it ever leaves the device.</p>
+</section>
+<section>
+<h2><span class="num">04</span>What may be transmitted</h2>
+<p>If a deployment is configured for it, GUARA may synchronize operational events (for example, a detected drowsiness episode) and minimized technical metrics (for example, aggregated detection statistics or system health data). These are used to support monitoring, safety follow-up and system performance.</p>
+<p class="callout">Even without video, telemetry may still be personal data if it can be linked to a specific person, vehicle or shift. It should be handled with the same care as any other operational record about people.</p>
+</section>
+<section>
+<h2><span class="num">05</span>Privacy modes</h2>
+<p>Deployments can be configured to match the needs and requirements of each organization. Typical profiles include:</p>
+<div class="modes">
+<div class="mode"><span class="tag">MODE 01</span><strong>Local Only</strong><p>Detection and alerts run on the device. Events and metrics are not synchronized to external systems.</p></div>
+<div class="mode"><span class="tag">MODE 02</span><strong>Operational Telemetry</strong><p>Operational events and minimized technical metrics are synchronized for fleet or safety monitoring. No continuous video is uploaded.</p></div>
+<div class="mode"><span class="tag">MODE 03</span><strong>Authorized Research</strong><p>For validation or model improvement under explicit authorization, agreed scope and defined retention, data collection can be expanded within those limits.</p></div>
+</div>
+</section>
+<section>
+<h2><span class="num">06</span>Designed for operational safety</h2>
+<p>GUARA is intended to monitor risk-related operational states such as fatigue, drowsiness or distraction, so that risk can be detected and addressed in time. It is not intended to measure personal productivity or to serve as a general disciplinary surveillance tool.</p>
+</section>
+<section class="faq">
+<h2><span class="num">FAQ</span>Frequently asked questions</h2>
+<div class="qa"><h3>Does GUARA identify me?</h3><p>No. GUARA does not require facial recognition to evaluate operational state. It analyzes signals such as eye openness, gaze and head orientation, not who you are.</p></div>
+<div class="qa"><h3>Does GUARA need Internet?</h3><p>No. Core detection can run locally on the device. Connectivity is only needed if a deployment is configured to synchronize events or metrics.</p></div>
+<div class="qa"><h3>Is GUARA recording me continuously?</h3><p>Not necessarily. The architecture can process images locally without storing continuous video.</p></div>
+<div class="qa"><h3>Can video be stored?</h3><p>Only if a specific deployment is configured to do so, for example under an authorized research setup. In that case, the scope, access and retention should be defined in advance by the organization.</p></div>
+<div class="qa"><h3>What data can be transmitted?</h3><p>Operational events and minimized technical metrics, when the configuration requires it. Continuous cloud video is not part of the standard operating model.</p></div>
+<div class="qa"><h3>Can settings differ between deployments?</h3><p>Yes. Each organization can define what stays local, what is synchronized and for how long it is kept, according to its own privacy, safety and legal requirements.</p></div>
+</section>
+<p class="note">Data retention, telemetry and access rules should be defined for each deployment according to the organization’s privacy, safety and legal requirements.</p>
+<div class="cta">
+<h2>Questions about privacy in a deployment?</h2>
+<p>We can walk your operations, HR or compliance team through how GUARA would be configured in your environment.</p>
+<a href="mailto:guaraplatform@guaraplatform.com">guaraplatform@guaraplatform.com</a>
+</div>
+<nav class="nav" aria-label="Related pages">
+<a href="/">Home</a>
+<a href="/about/">About</a>
+<a href="/mobility/">Mobility</a>
+<a href="/technology/">Technology</a>
+<a href="/validation/">Validation</a>
+<a href="/integration/">Integration</a>
+<a href="/es/privacidad/" hreflang="es" lang="es">Español</a>
+</nav>
+</div>
+</div>
+</main>
+<footer class="footer">
+<div class="wrap">GUARA Platform · Edge AI · Computer Vision · Human State Intelligence</div>
+</footer>
+</body>
+</html>
