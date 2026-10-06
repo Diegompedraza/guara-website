@@ -12,16 +12,15 @@
 
   // ---------------------------------------------------------------------------
   // PRODUCTION ONLY — used by `wrangler deploy` (Workers Builds on main).
-  // PLACEHOLDER: the production database `guara-leads` does not exist yet. With this
-  // placeholder id a production deploy fails closed (the site stays on its previous version).
-  // When approved: `npx wrangler d1 create guara-leads`, replace database_id below, then
+  // `guara-leads` is the production lead database. Preview deployments never see this
+  // binding (they use the `previews` block below). Schema changes:
   // `npx wrangler d1 migrations apply guara-leads --remote`.
   // ---------------------------------------------------------------------------
   "d1_databases": [
     {
       "binding": "DB",
       "database_name": "guara-leads",
-      "database_id": "00000000-0000-0000-0000-000000000000",
+      "database_id": "2bc5bd80-9c14-45ad-ac9b-4dce55da8375",
       "migrations_dir": "migrations"
     }
   ],
