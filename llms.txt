@@ -1,6 +1,6 @@
 # GUARA Platform
 
-> GUARA Platform is an Edge AI and computer vision platform for continuous human-state observability, temporal reasoning and safety-critical environments. Mobility is the first operational vertical.
+> GUARA Platform is a software platform for Human-State Intelligence in critical operations. It interprets how human-state signals evolve over time using computer vision, temporal analysis, AI and local processing. Professional mobility is the first vertical; GUARA Professional is its first complete reference implementation. Software licensing, technology integration, OEM / Embedded partnerships and pilots are open conversations; integration tooling (SDK/API-style interfaces) is under development, not a finished product.
 
 ## Canonical site
 - https://guaraplatform.com/
@@ -10,7 +10,7 @@
 - https://guaraplatform.com/mobility/
 - https://guaraplatform.com/technology/
 - https://guaraplatform.com/validation/
-- https://guaraplatform.com/integration/
+- https://guaraplatform.com/integration/ (Work with GUARA)
 - https://guaraplatform.com/privacy/
 - https://guaraplatform.com/es/privacidad/
 - https://guaraplatform.com/es/

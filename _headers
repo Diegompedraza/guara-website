@@ -36,3 +36,7 @@ https://:version.:subdomain.workers.dev/*
   Cache-Control: public, max-age=31536000, immutable
 /styles.v35.css
   Cache-Control: public, max-age=31536000, immutable
+/styles.v36.css
+  Cache-Control: public, max-age=31536000, immutable
+/script.v36.js
+  Cache-Control: public, max-age=31536000, immutable

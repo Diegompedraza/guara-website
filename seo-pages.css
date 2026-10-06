@@ -66,3 +66,16 @@ body{line-height:1.62}
 .content section>p,.content .faq .qa p,.content .ruled,.callout{max-width:68ch}
 .content .faq .qa p{line-height:1.6}
 .note{max-width:84ch}
+/* V36 SEO subpages: CTA link rows, status labels, mobility context stats */
+.cta-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.cta a.secondary{background:transparent;border-color:var(--line-strong);color:var(--text)}
+.cta a.secondary:hover{background:rgba(207,225,255,.06);border-color:var(--ice);color:#fff}
+.content h2 .status{display:inline-block;margin-left:10px;padding:3px 8px;border:1px solid var(--blue-ink);border-radius:2px;color:var(--blue-ink);font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;vertical-align:middle;line-height:1.4}
+.content h2 .status.outline{border-style:dashed;color:var(--ink-3);border-color:var(--rule-strong)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;margin:24px 0;border-top:1px solid var(--rule-strong);border-left:1px solid var(--rule-strong);background:var(--plate)}
+.stat{min-width:0;padding:20px 20px 22px;border-right:1px solid var(--rule-strong);border-bottom:1px solid var(--rule-strong)}
+.stat-k{display:block;color:var(--blue-ink);font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase}
+.stat strong{display:block;margin-top:10px;font-family:var(--head);font-size:34px;font-weight:700;line-height:1;letter-spacing:-.02em;color:var(--ink)}
+.content .stat p{margin:10px 0 0;font-size:14.5px;line-height:1.55}
+.content .sources{color:var(--ink-3);font-size:14px}
+@media (max-width:720px){.cta-links a{width:100%;justify-content:center;text-align:center}.content h2 .status{display:table;margin:10px 0 0}}
