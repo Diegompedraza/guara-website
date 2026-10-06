@@ -1,0 +1,5 @@
+# Local Wrangler state (local D1 database, build output) and dependencies
+.wrangler/
+node_modules/
+.dev.vars
+.dev.vars*

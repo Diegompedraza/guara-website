@@ -1,0 +1,16 @@
+// ADMIN ONLY — D1 commands for the preview lead database, e.g.
+//   npx wrangler d1 migrations apply guara-leads-preview --remote --config wrangler.d1-preview.jsonc
+// It has no `main` and no `assets`, so it cannot deploy the website, and it never references
+// the production database. The site itself is configured in wrangler.jsonc.
+{
+  "name": "guara-website",
+  "compatibility_date": "2026-10-01",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "guara-leads-preview",
+      "database_id": "ab06480c-4333-4081-b3d0-d2fb7b7df7aa",
+      "migrations_dir": "migrations"
+    }
+  ]
+}

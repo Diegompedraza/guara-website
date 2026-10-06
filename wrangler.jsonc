@@ -1,8 +1,51 @@
 {
   "name": "guara-website",
+  "main": "src/worker.js",
   "compatibility_date": "2026-10-01",
   "assets": {
-    "directory": "."
+    "directory": ".",
+    "binding": "ASSETS",
+    // Only the lead API runs Worker code first. Every page, stylesheet, script and asset is
+    // served directly by Workers Static Assets, exactly as before Phase B.
+    "run_worker_first": ["/api/*"]
   },
-  "previews": {}
+
+  // ---------------------------------------------------------------------------
+  // PRODUCTION ONLY — used by `wrangler deploy` (Workers Builds on main).
+  // `guara-leads` is the production lead database. Preview deployments never see this
+  // binding (they use the `previews` block below). Schema changes:
+  // `npx wrangler d1 migrations apply guara-leads --remote`.
+  // ---------------------------------------------------------------------------
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "guara-leads",
+      "database_id": "2bc5bd80-9c14-45ad-ac9b-4dce55da8375",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "vars": {
+    // Production writes are only accepted on guaraplatform.com hosts (see src/worker.js).
+    "LEAD_DB_ENV": "production"
+  },
+
+  // ---------------------------------------------------------------------------
+  // PREVIEWS ONLY — used by `wrangler preview` (Workers Builds on non-production branches).
+  // Preview deployments take their bindings exclusively from this block, so they can never
+  // reach the production database. Admin commands for this database use
+  // wrangler.d1-preview.jsonc (`--config wrangler.d1-preview.jsonc`).
+  // ---------------------------------------------------------------------------
+  "previews": {
+    "d1_databases": [
+      {
+        "binding": "DB",
+        "database_name": "guara-leads-preview",
+        "database_id": "ab06480c-4333-4081-b3d0-d2fb7b7df7aa",
+        "migrations_dir": "migrations"
+      }
+    ],
+    "vars": {
+      "LEAD_DB_ENV": "preview"
+    }
+  }
 }
