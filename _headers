@@ -4,7 +4,7 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
   Strict-Transport-Security: max-age=31536000; includeSubDomains
-  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; media-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; media-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests
 
 /assets/*
   Cache-Control: public, max-age=604800
@@ -40,3 +40,13 @@ https://:version.:subdomain.workers.dev/*
   Cache-Control: public, max-age=31536000, immutable
 /script.v36.js
   Cache-Control: public, max-age=31536000, immutable
+/styles.v37.css
+  Cache-Control: public, max-age=31536000, immutable
+/script.v37.js
+  Cache-Control: public, max-age=31536000, immutable
+
+# Form confirmation pages (no-JavaScript fallback): never indexed
+/thanks/*
+  X-Robots-Tag: noindex, nofollow
+/es/gracias/*
+  X-Robots-Tag: noindex, nofollow

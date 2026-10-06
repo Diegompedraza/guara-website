@@ -13,6 +13,9 @@
 wrangler.jsonc
 wrangler.json
 wrangler.toml
+wrangler.*.jsonc
+wrangler.*.json
+wrangler.*.toml
 .wrangler
 .wrangler/**
 .dev.vars
@@ -24,6 +27,14 @@ wrangler.toml
 # Project docs and internal reports
 README.md
 QA_REPORT.txt
+
+# Worker source, database migrations and tests (Phase B): server-side code is never a public asset
+src
+src/**
+migrations
+migrations/**
+tests
+tests/**
 
 # Dependencies
 node_modules
