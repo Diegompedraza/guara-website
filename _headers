@@ -44,6 +44,14 @@ https://:version.:subdomain.workers.dev/*
   Cache-Control: public, max-age=31536000, immutable
 /script.v37.js
   Cache-Control: public, max-age=31536000, immutable
+/styles.v38.css
+  Cache-Control: public, max-age=31536000, immutable
+/script.v38.js
+  Cache-Control: public, max-age=31536000, immutable
+/styles.v39.css
+  Cache-Control: public, max-age=31536000, immutable
+/styles.v40.css
+  Cache-Control: public, max-age=31536000, immutable
 
 # Form confirmation pages (no-JavaScript fallback): never indexed
 /thanks/*
